@@ -5,7 +5,7 @@ WORKDIR /usr/share/webapps
 RUN mkdir ris
 ADD . /usr/share/webapps/ris/
 
-RUN ln -s /usr/share/webapps/nextcloud /srv/http/ris
+RUN ln -s /usr/share/webapps/ris /srv/http/ris
 RUN chown -R http:http /usr/share/webapps/ris
 RUN chown -R http:http /srv/http
 
