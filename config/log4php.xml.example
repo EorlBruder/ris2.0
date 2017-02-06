@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="default" class="LoggerAppenderConsole">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="[%date{D M d H:i:s Y}] %logger %-5level: %msg%n" />
+        </layout>
+    </appender> 
+    
+    <!-- Root Logger muss gesetzt sein. Das LogLevel hier wird für alle untergeordneten 
+    und nicht weiter konfigurierten Logger verwendet -->
+    <root>
+        <level value="warn" />
+        <appender_ref ref="default" />
+    </root>
+
+    <!-- Optionale Logger -->   
+<!--     <logger name="dao">
+        <level value="debug" />
+        <appender_ref ref="default" />
+    </logger> -->
+
+</configuration>

@@ -1,0 +1,37 @@
+<h1>Zutat erstellen</h1>
+<div>
+
+	<form action="/zutatenerstellen/submit" method="post">
+		<table class="table table-striped" border="0" cellpadding="5" cellspacing="4">
+			<tr>
+				<td align="right">Name:</td>
+				<td>
+					<input type="text" size="40" maxlength="40" name="name">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">Basiseinheit:</td>
+				<td>
+					<select name="basiseinheit">
+						<repeat group="{{ @result }}" value="{{ @unit }}">
+							<option value="{{ @unit.id }}">{{ @unit.name }}</option>
+						</repeat>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">Beschreibung:</td>
+				<td><textarea name="beschreibung" type="text" rows="4" size="40" maxlength="1000"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">Aufbewahrung:</td>
+				<td>
+					<input type="text" name="aufbewahrung" size="40" maxlength="40" >
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="Erstellen">
+		<input type="reset" value="Abbrechen">
+	</form>
+</div>

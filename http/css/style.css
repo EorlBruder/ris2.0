@@ -1,0 +1,248 @@
+
+
+/************************** LAYOUT ******************************/
+
+body {
+	height: 100vh;
+	margin: 0; 
+	padding: 0;
+}
+
+.layout {
+	min-height: 100%;
+	width: 100%;
+	height: auto !important;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 60px;
+	display: table;
+	content: " ";
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.ownContainer,
+.subcontainer {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.footerRow,
+.containerRow,
+.subcontainerRow {
+	display: table-row;
+	width: 100%;
+}
+
+.subcontainerRow {
+	height: 100%;
+}
+
+.footerRow {
+	height: 0;
+	background-color: #222;
+}
+
+.headerRow {
+	height: 0;
+}
+
+.innerContainer{
+	display: table-cell;
+	width: 100%;
+	padding: 2vmin;
+	border: 0;
+	vertical-align: top;
+}
+.rightContainer,
+.leftContainer {
+	width: 0;
+	min-width: 10vw;
+	max-width: 40vw;
+}
+.rightContainer{
+	border-left: 2px solid;
+}
+.leftContainer{
+	border-right: 2px solid;
+}
+.hiddenContainer {
+	min-width: auto;
+	padding: 0;
+	border: 0;
+}
+
+/************************** HEADER ******************************/
+
+#lowerNavigationbar {
+	padding: 2vh;
+	border: 0;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+}
+
+#upperNavigationbar {
+	padding: 1vh;
+	border: 0;
+}
+
+.navbar-nav {
+    float: none;
+}
+
+/************************** FOOTER ******************************/
+
+.footer {
+	padding: 2vmin;
+}
+
+.footer>ul {
+	margin: 0;
+}
+
+/************************** SCHRIFTGRÖßEN *******************************/
+
+body {
+	font-size: 2.5vmin;
+}
+
+.title {
+	font-size: 4vmin;
+}
+
+.smalllink {
+	font-size: 2vmin;
+}
+
+.navbar-brand {
+	font-size: 5vmin;
+}
+
+th {
+    font-size: 3vmin;
+}
+
+/************************** FARBEN *******************************/
+
+a {
+	color: #44734E;
+}
+a:hover, 
+a:focus {
+	color: #67B176;
+}
+a:active {
+	color: #1E4427;
+}
+
+#lowerNavigationbar {
+	border-color: #000;
+	background-color: #315F3B;
+}
+
+.rightContainer,
+.leftContainer {
+	background-color: #EAEAEA;
+	border-color: #9D9D9D;
+}
+
+.hiddenContainer>.sidebutton {
+	border-color: #CCC !important;
+}
+
+.ownTable th,
+.ownTable td {
+	border-color: #ccc !important;
+}
+
+/************************** FAVORITES ******************************/
+
+/************************** CONTENT ******************************/
+
+/************************** KÜHLSCHRANK ******************************/
+
+.hideText {
+	display: inline;
+}
+
+.ownTable {
+	margin-bottom: 1.5vmin;
+	white-space: nowrap;
+}
+
+.ownTable th {
+	padding: 0.7vw;
+	border: 1px solid;
+	border-top: 0;
+}
+
+.ownTable td {
+	padding: 0.3vw;
+	border: 1px solid;
+	border-top: 0;
+}
+
+.ownTable th:first-child {
+	padding-left: 0;
+}
+
+.ownTable td:first-child,
+.ownTable th:first-child {
+	border-left: 0;
+}
+
+.ownTable th:last-child {
+	padding-right: 0;
+}
+
+.ownTable th:last-child,
+.ownTable td:last-child {
+	border-right: 0;
+}
+
+.ownTable tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.ownTable .fa{
+	display: inline;
+	padding-right: 0.3vw;
+}
+
+/************************** BUTTONS ******************************/
+
+.sidebutton {
+	height: 100%;
+	border: 0;
+	margin: 0;
+	border-radius: 0;
+	padding: 1vmin;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.rightContainer>.sidebutton {
+	border-left: 1px solid;
+}
+.leftContainer>.sidebutton {
+	border-right: 1px solid;
+}
+
+button, 
+input {
+	margin: 1vmin;
+	margin-left: 0;
+}
+
+#lowerNavigationbar button,
+#lowerNavigationbar input,
+#upperNavigationbar button,
+#upperNavigationbar input {
+	margin: 0;
+}
+
+
+/************************** MISCELLANEOUS ******************************/

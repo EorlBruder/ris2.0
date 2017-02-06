@@ -1,0 +1,52 @@
+<!--<h1>Registrierung</h1>
+<div>
+
+	<form action="http://127.0.0.1:8000/registrieren">
+		<table class="table table-striped" border="0" cellpadding="5" cellspacing="4">
+			<tr>
+				<td align="right">Vorname:</td>
+				<td><input type="text" size="40" maxlength="40" name="VName"></td>
+			</tr>
+			<tr>
+				<td align="right">Nachname:</td>
+				<td><input type="text" size="40" maxlength="40" name="NName"></td>
+			</tr>
+			<tr>
+				<td align="right">E-mailadresse:</td>
+				<td> <input type="email" name="usremail"></td>
+			</tr>
+			<tr>
+				<td align="right">Password:</td>
+				<td> <input type="password" name="usremail"></td>
+			</tr>
+		</table>
+		<input type="submit" value=" erstellen ">
+		<input type="reset" value=" abbrechen">
+	</form>
+</div>-->
+
+
+<form action="index.php?section=register" method="post">
+	<fieldset>
+		<legend>Registrieren</legend>
+		<div> 
+			<input type="text" placeholder="Benutzername" name="Username"/>
+		</div>
+		<div> 
+			<input type="password" placeholder="Passwort" name="Password[]"/>
+		</div>
+		<div> 
+			<input type="password" placeholder="Passwort wiederholen" name="Password[]"/>
+		</div>
+		<div>
+			<input type="text" placeholder="E-Mail" name="Email"/>
+		</div>
+		<div>
+			<input type="text" placeholder="Kontrollfrage" name="Kontrollfrage"/>
+		</div>
+		<div>
+			<input type="text" placeholder="Antwort" name="Antwort"/>
+		</div>
+		<input type="submit" name="formaction" value="Registrieren" />
+	</fieldset>
+</form>

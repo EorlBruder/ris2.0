@@ -1,0 +1,5 @@
+syntax: glob
+
+http/tmp/
+config/ris.ini
+config/log4php.xml

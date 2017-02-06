@@ -1,0 +1,238 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Protokoll 10.4.2014 RIS-Kickoff-Meeting
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Termin für git-Treffen
+\end_layout
+
+\begin_layout Standard
+git-Infrastruktur + test-Infrastruktur + rails-Struktur + Bootstrap
+\end_layout
+
+\begin_layout Standard
+git erklärt
+\end_layout
+
+\begin_layout Standard
+travis ci erklärt
+\end_layout
+
+\begin_layout Standard
+wikis müssen angepasst/genutzt werden
+\end_layout
+
+\begin_layout Standard
+diskussion über git-branches
+\end_layout
+
+\begin_layout Standard
+Da alle Punkte, die im git-Treffen besprochen werden sollten jetzt schon
+ erledigt wurden, kein git-Treffen
+\end_layout
+
+\begin_layout Section
+Termin für Sprint Planning
+\end_layout
+
+\begin_layout Standard
+Mittwoch der 16.4.
+ um 11 Uhr
+\end_layout
+
+\begin_layout Standard
+Aufgaben 
+\end_layout
+
+\begin_layout Itemize
+Schätzung der User Stories und erstellen des Sprint Backlogs in ca.
+ 1-1.5 Stunden (die 0.5 Stunden Abweichung von der 
+\begin_inset Quotes eld
+\end_inset
+
+Definition
+\begin_inset Quotes erd
+\end_inset
+
+ Sprint Planning ergeben sich durch den Einbezug der Schätzung, die normalerweis
+e in ein anderes Meeting käme
+\end_layout
+
+\begin_layout Itemize
+Falls am Ende noch Zeit ist: Klärung von Fragen zur git-Infrastruktur +
+ verschiedene Datenbank-Implementationen anschauen (s.
+ TODOS am Ende)
+\end_layout
+
+\begin_layout Section
+Termin für Weekly Scrum
+\end_layout
+
+\begin_layout Standard
+Vorschlag: Ein Termin, an dessem Beginn Weekly Scrum ist und danach sind
+ jeweils nötige andere Treffen
+\end_layout
+
+\begin_layout Standard
+Donnerstags 17 Uhr
+\end_layout
+
+\begin_layout Standard
+nächste Woche (17.4.) Kein Treffen, weil Anja nicht da und Sprint Planning
+ am Mittwoch
+\end_layout
+
+\begin_layout Section
+PO klären
+\end_layout
+
+\begin_layout Standard
+Entwicklerteam übernimmt vorerst die Rolle des Product Owners 
+\end_layout
+
+\begin_layout Section
+Product Backlog zeigen
+\end_layout
+
+\begin_layout Standard
+MS vorgestellt
+\end_layout
+
+\begin_layout Standard
+PB durchgegangen, ergänzt und priorisiert (zu finden unter 
+\begin_inset CommandInset href
+LatexCommand href
+name "Google Drive"
+target "https://docs.google.com/spreadsheet/ccc?key=0AoZ3-rwlM_uLdEt0ZlEtUUpLQk85T25zM2xfSXpnWFE&usp=sharing"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Section
+TODOS bis Mittwoch
+\end_layout
+
+\begin_layout Standard
+David: 
+\end_layout
+
+\begin_layout Itemize
+Tips im wiki übersetzen 
+\end_layout
+
+\begin_layout Itemize
+Issues einpflegen 
+\end_layout
+
+\begin_layout Itemize
+Links ins wiki einpflegen (evtl auch tutorial-Links) 
+\end_layout
+
+\begin_layout Itemize
+Links zu Lyx und Modell-Programm
+\end_layout
+
+\begin_layout Itemize
+den anderen Leuten Rechte über das Repo geben 
+\end_layout
+
+\begin_layout Itemize
+Sprint Planning vorbereiten
+\end_layout
+
+\begin_layout Standard
+Entwickler: 
+\end_layout
+
+\begin_layout Itemize
+Sich in rails einarbeiten (alles installieren, sich mit github vertraut
+ machen) 
+\end_layout
+
+\begin_layout Itemize
+das Datenbank-Modell implementieren diese Implementation soll (erstmal)
+ nicht aufs git.
+ 
+\end_layout
+
+\end_body
+\end_document

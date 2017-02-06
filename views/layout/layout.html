@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RIS</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/controller/variables.js"></script>
+    <script src="/controller/main.js"></script>
+    <script src="/controller/layout.js"></script>
+    <script src="/controller/rezepterstellen.js"></script>
+    <script src="/controller/rezeptsuchanzeige.js"></script>
+    <script src="/controller/lower_navbar.js"></script>
+    <script src="/controller/upper_navbar.js"></script>
+    <meta charset="utf8" />
+  </head>
+  <body>
+    <div class="ownContainer">
+      <div class="containerRow headerRow">
+        <include href="{{ @upper_navbar }}"/>
+        <include href="{{ @lower_navbar }}"/>
+      </div>
+
+      <div class="containerRow">
+        <div class="subcontainer">
+          <div class="subcontainerRow">
+            <div class="innerContainer leftContainer hiddenContainer">
+              <button id="toggleFavorites" class="sidebutton btn btn-default">
+                <i class="fa fa-caret-left"></i>
+              </button>
+            </div>
+            <div id="favorites" class="innerContainer leftContainer">
+              <include href="{{ @favorites }}"/>
+            </div>
+            <div class="innerContainer middleContainer" role="main">
+              <include href="{{ @content }}" />
+            </div>
+            <div id="kuehlschrank" class="innerContainer rightContainer">
+              <include href="{{ @kuehlschrank }}" />
+            </div>
+            <div class="innerContainer rightContainer hiddenContainer">
+              <button id="toggleKuehlschrank" class="sidebutton btn btn-default">
+                <i class="fa fa-caret-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="containerRow footerRow">
+        <include href="{{ @footer }}"/>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+  </body>
+</html>

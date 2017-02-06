@@ -1,0 +1,65 @@
+<h1>Rezept erstellen</h1>
+<div>
+
+	<form method="post" action="/rezepterstellen/submit">
+		<table class="table table-striped" border="0" cellpadding="5" cellspacing="4">
+			<tr>
+                <td align="right">Name:</td>
+                <td><input type="text" size="40" maxlength="40" name="name"></td>
+            </tr>
+            <tr>
+                <td align="right">Portionen:</td>
+                <td><input type="number" value="1" min="1" name="portions"></td>
+            </tr>
+            <tr>
+                <td align="right">Schwierigkeit:</td>
+                <td><select name="difficulty" >
+                    <option value="-1">auswählen</option>
+                    <option value="1">leicht</option>
+                    <option value="2">mittel</option>
+                    <option value="3">schwierig</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td align="right">Aufwand:</td>
+                <td> <input type="number" name="time" min="1" max="200">
+                 <select name="hourorminute">
+                    <option value="-1">auswählen</option>
+                    <option>Stunde(n)</option>
+                    <option>Minute(n)</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td align="right">Werkzeuge:</td>
+                <td>
+                    <input type="text" size="40" maxlength="40" name="tools">
+                    <button> +</button>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Zutaten:</td>
+                <td>
+                    <input type="text" size="40" maxlength="40" name="Zutat">
+                    <button> +</button>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Zubereitung:</td>
+                <td>
+                    <textarea name="zubereitung" type="text" rows="4" size="40" maxlength="1000"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Bild:</td>
+                <td><form action="demo_form.asp">
+                 <input type="file" name="img">
+                </form></td>
+            </tr>
+
+		</table>
+		<input type="submit" value=" erstellen ">
+		<input type="reset" value=" abbrechen">
+	</form>
+</div>

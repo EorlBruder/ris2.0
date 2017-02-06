@@ -1,0 +1,9 @@
+<div>
+	<div class="title">Favoriten</div>
+    <ul id="favoritelist">
+        <repeat group="{{ @favorites_results }}" value="{{ @item }}">
+                <li> 
+                    <a href="/recipe/{{ @item.id }}">{{ @item.name }}</a></li>
+        </repeat>
+    </ul>
+</div>

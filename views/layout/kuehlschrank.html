@@ -1,0 +1,56 @@
+<div>
+	<div class="title">K&uuml;hlschrank</div>
+	<table class="ownTable table-striped">
+		<thead>
+			<th title="Zutat">
+				<i class="fa fa-cutlery"></i>
+				<span class="hideText">Zutat</span>
+			</th>
+			<th title="Menge">
+				<i class="fa fa-cubes"></i>
+				<span class="hideText">Menge</span>
+			</th>
+			<th title="Haltbarkeitsdatum">
+				<i class="fa fa-calendar"></i>
+				<span class="hideText">HBK</span>
+			</th>
+		</thead>
+		<tbody>
+			<repeat group="{{ @fridge_results }}" value="{{ @item }}">
+				<tr>
+					<td>
+						<a href="/ingredient/{{ @item.ingredient_id }}">{{ @item.ingredient_name }}</a>
+					</td>
+					<td>
+						{{ @item.name }}
+					</td>
+					<td>
+						{{ @item.amount }}
+					</td>
+				</tr>
+			</repeat>
+		</tbody>
+	</table>
+	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#addNewIngredientDialog">Zutat hinzuf&uuml;gen</button>
+	<button type="button" class="btn btn-default">Suche nach möglichen Rezepten</button>
+</div>
+
+<div id="addNewIngredientDialog" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Zutat zum Kühlschrank hinzufügen</h4>
+				</div>
+				<div class="modal-body">
+					<input placeholder="Zutat"></input>
+					<input placeholder="Menge"></input>
+					<p>[Hier Einheit hinzufügen]</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" onClick="$('#addNewIngredientDialog').modal('hide');">Okay</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->

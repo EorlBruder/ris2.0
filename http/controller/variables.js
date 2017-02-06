@@ -1,0 +1,1 @@
+var recipeperpage = 2;

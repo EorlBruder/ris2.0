@@ -1,0 +1,32 @@
+<div id="recipesearchdisplay" class="ownContainer">
+    <div class="containerRow">
+        <table class="table table-striped">
+         	<thead>
+         		<th>Rezept</th>
+         		<th>Bild</th>
+         		<th>Schwierigkeit</th>
+         		<th>Aufwand</th>
+         	</thead>
+         	<tbody id="recipecount">
+            <repeat group="{{ @results }}" value="{{ @item }}">
+           		<tr> 
+           			<td> <a href="/recipe/{{ @item.id }}"> {{ @item.name }} </a> </td>
+           			<td> <img src="http://images.tagseoblog.de/bilder/bild-foto/bild.jpg" height="100px"></td>
+           			<td>  {{ @item.difficulty }}</td>
+           			<td>  {{ @item.time }}</td>
+           		</tr>
+            </repeat>
+         	</tbody>
+        </table>
+    </div>
+    <div class="containerRow footerRow" style="background-color: inherit;">
+        <nav>
+     	  <ul id="pagedisplay" class="pagination" style="margin: 0; visibility: hidden;">
+     	  	<li><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+     	  	<li><a href="#">1</a></li>
+     	  	<li><a href="#">2</a></li>
+     	  	<li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
+     	  </ul>
+        </nav>
+    </div>
+</div>

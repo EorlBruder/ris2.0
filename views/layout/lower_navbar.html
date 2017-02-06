@@ -1,0 +1,25 @@
+<nav id="lowerNavigationbar" class="navbar navbar-inverse">
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li>
+				    <form id="search-form" class="form-inline" role="form">
+				    	<div class="form-group"> 
+				    		<label class="sr-only" for="searchbar">Suche</label>
+				    		<input type="text" class="form-control" id="searchbar" placeholder="Ingredient">
+                             <div class="form-group">
+                              <select class="form-control btn dropdown-toggle" id="selectedSearchKind">
+                                <option id="recipesearch">Rezept</option>
+                                <option id="ingredientsearch">Zutaten</option>
+                              </select>
+                            </div>
+				    		<button id="searchSomething" type="button" class="btn btn-default">Suche</button>
+				    	</div>
+				    </form>
+                </li>
+                <li style="float: right!important;">
+                    <button id="createRecipe" type="button" class="btn btn-default">Rezept erstellen</button>
+                    <button id="createIngredient" type="button" class="btn btn-default">Zutat hinzufügen</button>
+                </li>
+			</ul>
+	</div>
+</nav>
