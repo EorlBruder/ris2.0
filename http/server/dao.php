@@ -1,6 +1,6 @@
 <?php
-	require_once('../server/constants.php');
-	require_once('../server/helpers.php');
+	require_once('server/constants.php');
+	require_once('server/helpers.php');
 
 	/**
 	 * Diese Klasse stellt Funktionen zur Datenbankinteraktion zur Verfügung
@@ -37,7 +37,7 @@
 		 */
 		private function configure()
 		{
-			$config = parse_ini_file('../config/ris.ini');
+			$config = parse_ini_file('config/ris.ini');
 			$this->db=new DB\SQL($config['db_path'],$config['db_user'],$config['db_password']);
 			new \DB\SQL\Session($this->db);
 			return $this->db->exec("SET NAMES utf8");

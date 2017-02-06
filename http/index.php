@@ -5,12 +5,12 @@
 	 * author: EorlBrother
 	 * date: 25.11.14
 	 */
-	require_once('../server/recipeDao.php');
-	require_once('../server/ingredientsDao.php');
-	require_once('../server/userDao.php');
-	require_once('../server/fridgeDao.php');
+	require_once('server/recipeDao.php');
+	require_once('server/ingredientsDao.php');
+	require_once('server/userDao.php');
+	require_once('server/fridgeDao.php');
 
-	$config = parse_ini_file('../config/ris.ini');
+	$config = parse_ini_file('config/ris.ini');
 	$f3 = require($config['fatfree_path']);
 	include($config['log4php_path']);
 
@@ -19,7 +19,7 @@
 	header("Content-type:text/html; charset=utf-8");
 
 	// Tell log4php to use our configuration file.
-	Logger::configure('../config/log4php.xml');
+	Logger::configure('config/log4php.xml');
 
 
 	/**
@@ -66,7 +66,7 @@
 	 */
 	function buildViewPath($page)
 	{
-		return '../views/'.$page.'.html';
+		return 'views/'.$page.'.html';
 	}
 
 	$f3->route('GET /please_log_in',
@@ -204,7 +204,7 @@
 	$f3->route('GET /',
 		function($f3)
 		{
-			render_layout($f3, '../views/index.html');
+			render_layout($f3, 'views/index.html');
 		}
 	);
 

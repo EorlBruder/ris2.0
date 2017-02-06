@@ -1,5 +1,5 @@
 <?php
-	require_once('../server/dao.php');
+	require_once('server/dao.php');
 	/**
 	 * DAO für die Zutaten
 	 * author: EorlBrother

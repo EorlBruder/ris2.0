@@ -1,5 +1,5 @@
 <?php
-	require_once('../server/dao.php');
+	require_once('server/dao.php');
 	/**
 	 * DAO für den Kühlschrank
 	 * author: EorlBrother

@@ -3,7 +3,7 @@ MAINTAINER  David Magnus Henriques <eorlbruder@magnus-henriques.de>
 
 WORKDIR /usr/share/webapps
 RUN mkdir ris
-ADD . /usr/share/webapps/ris/
+ADD http /usr/share/webapps/ris/
 
 RUN ln -s /usr/share/webapps/ris /srv/http/ris
 RUN chown -R http:http /usr/share/webapps/ris

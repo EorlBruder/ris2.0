@@ -1,5 +1,7 @@
 syntax: glob
 
 http/tmp/
-config/ris.ini
-config/log4php.xml
+*/config/ris.ini
+*/config/log4php.xml
+http/config/ris.ini
+http/config/log4php.xml
