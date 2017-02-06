@@ -9,6 +9,6 @@ RUN ln -s /usr/share/webapps/ris /srv/http/ris
 RUN chown -R http:http /usr/share/webapps/ris
 RUN chown -R http:http /srv/http
 
-ADD assets/0-nextcloud.conf /etc/nginx/sites-available/0-ris.conf
+ADD assets/0-ris.conf /etc/nginx/sites-available/0-ris.conf
 
 CMD ["supervisord", "-n"]
