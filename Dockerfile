@@ -1,4 +1,4 @@
-FROM registry.eorlbruder.de/nginx-php
+FROM build.registry.eorlbruder.de/nginx-php
 MAINTAINER  David Magnus Henriques <eorlbruder@magnus-henriques.de>
 
 WORKDIR /usr/share/webapps
