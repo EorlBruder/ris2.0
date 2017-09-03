@@ -35,7 +35,7 @@
 			$re = "/([^.\\/]+).html/";
 
 			preg_match($re, $content, $matches);
-			if(!in_array($matches[1], array('index', 'login', 'registrieren'))) {
+			if(!in_array($matches[1], array('index_not_logged_in', 'login', 'registrieren'))) {
 				$f3->reroute('please_log_in');
 			}
 		}
@@ -250,7 +250,11 @@
 	$f3->route('GET /',
 		function($f3)
 		{
-			render_layout($f3, 'views/index.html');
+			if ($f3->get('SESSION.userID')) {
+				render_layout($f3, 'views/index.html');
+			} else {
+				render_layout($f3, 'views/index_not_logged_in.html');
+			}
 		}
 	);
 
