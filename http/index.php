@@ -124,6 +124,13 @@
 		{
 			$dao = new RecipeDao();
 			$result = $dao->findById($f3->get('PARAMS.id'))[0];
+			$favs = $dao->getFavoritesForCustomer($f3->get('SESSION.userID'));
+			$favo_key = array_search($result['name'], array_column($favs, 'name'));
+			if ($favo_key !== FALSE) {
+				$result['favo'] = 'true';
+			} else {
+				$result['favo'] = 'false';
+			}
 			$f3->set('result', $result);
 			render_layout($f3, buildViewPath('rezept'));
 		}
@@ -207,6 +214,28 @@
 		function($f3) {
 			$dao = new IngredientDao();
 			$dao->createIngredient($f3->get('POST'));
+			$f3->reroute('/success');
+		}
+	);
+
+	/**
+	 * Rezept favorisieren
+	 */
+	$f3->route('POST /rezeptfavo',
+		function($f3) {
+			$dao = new RecipeDao($f3);
+			$result = $dao->addFavoriteForCustomer($f3->get('POST.recipeid'));
+			$f3->reroute('/success');
+		}
+	);
+
+	/**
+	 * Rezept entfavorisieren
+	 */
+	$f3->route('POST /rezeptunfavo',
+		function($f3) {
+			$dao = new RecipeDao($f3);
+			$result = $dao->removeFavoriteForCustomer($f3->get('POST.recipeid'));
 			$f3->reroute('/success');
 		}
 	);
