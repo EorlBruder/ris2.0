@@ -113,6 +113,7 @@
 			$result = $dao->findById($f3->get('PARAMS.id'))[0];
 			$favs = $dao->getFavoritesForCustomer($f3->get('SESSION.userID'));
 			$favo_key = array_search($result['name'], array_column($favs, 'name'));
+			$result['ingredients'] =$dao->getIngredientsForRecipe($f3->get('PARAMS.id'));
 			if ($favo_key !== FALSE) {
 				$result['favo'] = 'true';
 			} else {
