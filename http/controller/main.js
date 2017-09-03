@@ -4,10 +4,12 @@ $(document).ready(function () {
 		$('#notLoggedIn').hide();
         $('.leftContainer').show();
         $('.rightContainer').show();
+				$('.lowerNavbar').show();
 	} else {
 		$('#loggedIn').hide();
         $('.leftContainer').hide();
         $('.rightContainer').hide();
+				$('.lowerNavbar').hide();
 	}
 });
 
@@ -21,6 +23,7 @@ function handleLogin () {
 	$('#loginPW').css('border','1px solid black');
     $('.leftContainer').show();
     $('.rightContainer').show();
+		$('.lowerNavbar').show();
 	location.reload();
 };
 
@@ -39,6 +42,7 @@ function handleLogout () {
 	$('#loggedIn').hide();
     $('.leftContainer').hide();
     $('.rightContainer').hide();
+		$('.lowerNavbar').hide();
 	location.reload();
 };
 
