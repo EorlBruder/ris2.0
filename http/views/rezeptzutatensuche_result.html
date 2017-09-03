@@ -1,0 +1,7 @@
+<div>
+	<repeat group="{{ @result }}" value="{{ @recipe }}">
+		<repeat group="{{ @recipe }}" value="{{ @item }}">
+			<a href="/recipe/{{@item.id}}">{{ @item.name }}</a>
+		</repeat>
+	</repeat>
+</div>

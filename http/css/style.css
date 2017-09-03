@@ -231,11 +231,11 @@ a:active {
 	border-right: 1px solid;
 }
 
-button, 
+/*button, 
 input {
 	margin: 1vmin;
 	margin-left: 0;
-}
+}*/
 
 #lowerNavigationbar button,
 #lowerNavigationbar input,
@@ -246,3 +246,19 @@ input {
 
 
 /************************** MISCELLANEOUS ******************************/
+
+a.remove-x, a.remove-x:link, a.remove-x:visited {
+	text-decoration: none;
+}
+
+a.remove-x:hover {
+	color: #C60000 !important;
+}
+
+.autocomplete-ingredient {
+	background-color: #DEDEDE;
+	border-radius: 20px;
+	padding: 5px 15px !important;
+	margin-right: 5px;
+    margin-bottom: 5px;
+}

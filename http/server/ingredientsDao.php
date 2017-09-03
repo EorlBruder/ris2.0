@@ -38,6 +38,11 @@
 			return $this->execQuery();
 		}
 
+		public function getAllIngredients() {
+			$this->setCallQuery("getAllIngredients", null);
+			return $this->execQuery();
+		}
+
 		public function getPicturesForIngredient($ingredientid)
 		{
 			$this->setCallQuery("getPicturesForIngredient", $ingredientid);

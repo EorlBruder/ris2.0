@@ -1,0 +1,45 @@
+<script type="text/javascript">
+	$(function () {
+		var ingredients = [];
+		<repeat group="{{ @result }}" value="{{ @ingredient }}">
+			ingredients.push({label: '{{ @ingredient.name }}', value: {{ @ingredient.id }}});
+		</repeat>
+		/// fix syntax highlighting
+		$("#rezeptzutatensuche").autocomplete({
+			minLength: 0,
+		    source: ingredients,
+		    select: function (event, ui) {
+		    	$('#selectedingreds')
+		    		.append($('<li class="autocomplete-ingredient list-inline-item">').data('id', ui.item.value)
+		    			.append(ui.item.label)
+		    				.append($('<a class="remove-x text-danger"> <i class="fa fa-times" aria-hidden="true"></i></span></a>')
+		    				.on('click', function (event2) {
+		    					$(this).parent().remove();
+		    				})));
+
+		    	$(this).val('');
+		    	event.preventDefault();
+		    }
+		});
+
+		$('#rezeptzutatensuche-submit').off('click').on('click', function () {
+			arr = $('#selectedingreds').find('li').map(function(i, el) {
+			    return $(el).data('id');
+			}).get();
+
+			self.location='/rezeptzutatensuche/search/' + arr.join(',');
+		});
+	});
+</script>
+<div>
+	<h2>Rezeptsuche nach Zutaten</h2>
+	<div class="input-group">
+	  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-plus" aria-hidden="true"></i></span>
+	  <input type="text" id="rezeptzutatensuche" class="form-control" placeholder="Zutaten suchen" aria-label="Zutaten suchen" aria-describedby="basic-addon1">
+	</div>
+	<div style="margin-top: 20px;">Ausgewählte Zutaten:
+		<ul id="selectedingreds" class="list-inline"> <!-- style="margin: 15px 0; padding: 0;"-->
+		</ul>
+	</div>
+	<button class="btn btn-primary btn-lg" id="rezeptzutatensuche-submit">Suchen</button>
+</div>

@@ -246,6 +246,38 @@
 	);
 
 	/**
+	 * temporäre Rezeptsuche nach Zutaten
+	 */
+	$f3->route('GET /rezeptzutatensuche',
+		function($f3)
+		{
+			$dao = new IngredientDao();
+			$result = $dao->getAllIngredients();
+			$f3->set('result', $result);
+			render_layout($f3, 'views/rezeptzutatensuche.html');
+		}
+	);
+
+	/**
+	 * temporäre Rezeptsuche search
+	 */
+	$f3->route('GET /rezeptzutatensuche/search/@searchString',
+		function($f3)
+		{
+			$dao = new RecipeDao($f3);
+			$searchString = $f3->get('PARAMS.searchString');
+			$ingredients = explode(',', $searchString);
+			$matchedRecipes = array();
+			foreach($ingredients as $ingredient) {
+				$result = $dao->searchRecipesByIngredient($ingredient);
+				array_push($matchedRecipes, $result);
+			}
+			$f3->set('result', $matchedRecipes);
+			render_layout($f3, 'views/rezeptzutatensuche_result.html');		
+		}
+	);
+
+	/**
 	 * index.html wird als content verwendet
 	 */
 	$f3->route('GET /',
