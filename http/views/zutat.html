@@ -1,8 +1,8 @@
 <div width="100%">
-    <a style="width: 100%">
-        <img src="http://images.tagseoblog.de/bilder/bild-foto/bild.jpg" height="100px" width="100%" alt="...">
-    </a>
-    <span> {{ @result.name }}</span>
+    <repeat group="{{ @result.pictures }}" value="{{ @picture }}">
+        <a href="{{ @picture.src }}"><img src="{{ @picture.src }}" height="200px"></a>
+    </repeat>
+    <p> {{ @result.name }}</p>
     <p>[Hier kommen Buttons hin:]</p><button data-toggle="modal" data-target="#addIngredientDialog">Zum Kühlschrank hinzufügen</button>
     <div>
     	<p>Beschreibung:</p>

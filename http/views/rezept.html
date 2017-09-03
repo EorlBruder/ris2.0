@@ -1,8 +1,12 @@
 <div width="100%">
-    <a style="width: 100%">
+    <!-- <a style="width: 100%">
         <img src="http://images.tagseoblog.de/bilder/bild-foto/bild.jpg" height="100px" width="100%" alt="...">
-    </a>
-	<span class="media-heading"> {{ @result.name }}</span><br><span>Portionen:</span><input type="number" value="1" min="1"></input><button><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button><br>
+    </a> -->
+    <repeat group="{{ @result.pictures }}" value="{{ @picture }}">
+    	<a href="{{ @picture.src }}"><img src="{{ @picture.src }}" height="200px"></a>
+    </repeat>
+	<p class="media-heading"> {{ @result.name }}</p>
+	<span>Portionen:</span><input type="number" value="1" min="1"></input><button><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button><br>
 	<check if="{{ @result.favo=='true' }}">
 		<false><button id="recipeAddFavo">Favorit hinzufügen</button></false>
 		<true><button id="recipeDelFavo">Favorit entfernen</button></true>

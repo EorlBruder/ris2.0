@@ -122,11 +122,13 @@
 	$f3->route('GET /recipe/@id',
 		function($f3)
 		{
+			$recipeid = $f3->get('PARAMS.id');
 			$dao = new RecipeDao();
 			$result = $dao->findById($f3->get('PARAMS.id'))[0];
 			$favs = $dao->getFavoritesForCustomer($f3->get('SESSION.userID'));
 			$favo_key = array_search($result['name'], array_column($favs, 'name'));
-			$result['ingredients'] =$dao->getIngredientsForRecipe($f3->get('PARAMS.id'));
+			$result['ingredients'] = $dao->getIngredientsForRecipe($recipeid);
+			$result['pictures'] = $dao->getPicturesForRecipe($recipeid);
 			if ($favo_key !== FALSE) {
 				$result['favo'] = 'true';
 			} else {
@@ -171,6 +173,7 @@
 		{
 			$dao = new IngredientDao();
 			$result = $dao->findById($f3->get('PARAMS.id'))[0];
+			$result['pictures'] = $dao->getPicturesForIngredient($f3->get('PARAMS.id'));
 			$f3->set('result', $result);
 			render_layout($f3, buildViewPath('zutat'));
 		}

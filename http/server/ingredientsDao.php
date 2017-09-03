@@ -38,6 +38,12 @@
 			return $this->execQuery();
 		}
 
+		public function getPicturesForIngredient($ingredientid)
+		{
+			$this->setCallQuery("getPicturesForIngredient", $ingredientid);
+			return $this->execQuery();
+		}
+
 		public function createIngredient($post) {
 			function _stringify($var) {
 				return "'".$var."'";
