@@ -1,13 +1,22 @@
 $(function () {
-	$('#recipeAddFavo').off('click').on('click', function () {
+	var ajaxRequest = function (target) {
 		$.ajax({
-			url: '/rezeptfavo',
+			url: '/' + target,
 			method: 'POST',
 			data: { recipeid: +location.href.substr(location.href.lastIndexOf('/')+1) },
 			success: function(data) {
-				alert('success');
+				location.reload();
 			},
 			error: ajaxErrorLog
 		});
+	}
+
+	$('#recipeAddFavo').off('click').on('click', function () {
+		ajaxRequest('rezeptfavo');
 	});
+
+	$('#recipeDelFavo').off('click').on('click', function () {
+		ajaxRequest('rezeptunfavo');
+	});
+
 });

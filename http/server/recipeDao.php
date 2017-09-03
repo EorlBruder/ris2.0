@@ -41,6 +41,12 @@
 			return $this->execQuery();
 		}
 
+		public function removeFavoriteForCustomer($recipeid)
+		{
+			$this->setCallQuery("removeFavoriteForCustomer", $this->f3->get('SESSION.userID') . ', ' . $recipeid);
+			return $this->execQuery();
+		}
+
 		public function createRecipe($post) {
 			$result = Helpers::formPostStringBuilder($post, array('name', 'portions', 'difficulty', 'time', 'tools', 'zubereitung'));
 			$this->setCallQuery("createRecipe", $result . ', ' . $this->f3->get('SESSION.userID'));
