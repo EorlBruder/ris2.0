@@ -46,6 +46,7 @@
 		}
 		setArea($f3, 'content', $content);
 		setArea($f3, 'favorites', buildViewPath('layout/favorites'));
+		setArea($f3, 'favorites_content', buildViewPath('favorites_content'));
 		setArea($f3, 'kuehlschrank', buildViewPath('layout/kuehlschrank'));
 		setArea($f3, 'upper_navbar', buildViewPath('layout/upper_navbar'));
 		setArea($f3, 'lower_navbar', buildViewPath('layout/lower_navbar'));
