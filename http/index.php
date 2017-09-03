@@ -35,7 +35,7 @@
 			$re = "/([^.\\/]+).html/";
 
 			preg_match($re, $content, $matches);
-			if(!in_array($matches[1], array('index', 'login'))) {
+			if(!in_array($matches[1], array('index', 'login', 'registrieren'))) {
 				$f3->reroute('please_log_in');
 			}
 		}
@@ -89,6 +89,19 @@
 				$f3->set('SESSION.userID', $dao->getCustomerIDByEmail($userMail));
 				echo $userMail;
 			}
+		}
+	);
+
+	/**
+	 * Registrieren
+	 */
+	$f3->route('POST /register',
+		function($f3)
+		{
+			$f3->clear('SESSION');
+			$dao = new UserDao();
+			$dao->createCustomer($f3->get('POST'));
+			$f3->reroute('/');
 		}
 	);
 
