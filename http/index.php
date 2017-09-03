@@ -199,6 +199,17 @@
 	);
 
 	/**
+	 * Rezept favorisieren
+	 */
+	$f3->route('POST /rezeptfavo',
+		function($f3) {
+			$dao = new RecipeDao($f3);
+			$result = $dao->addFavoriteForCustomer($f3->get('POST.recipeid'));
+			$f3->reroute('/success');
+		}
+	);
+
+	/**
 	 * index.html wird als content verwendet
 	 */
 	$f3->route('GET /',
