@@ -270,9 +270,14 @@
 			$matchedRecipes = array();
 			foreach($ingredients as $ingredient) {
 				$result = $dao->searchRecipesByIngredient($ingredient);
-				array_push($matchedRecipes, $result);
+				if (sizeof($result)) 
+					array_push($matchedRecipes, $result);
 			}
-			$f3->set('result', $matchedRecipes);
+			if (sizeof($matchedRecipes)) {
+				$f3->set('result', $matchedRecipes);
+			} else {
+				$f3->set('result', '');
+			}
 			render_layout($f3, 'views/rezeptzutatensuche_result.html');		
 		}
 	);

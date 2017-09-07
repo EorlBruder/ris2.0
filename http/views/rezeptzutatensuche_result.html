@@ -1,4 +1,8 @@
 <div>
+	<check if="{{ @result == '' }}">
+		Es wurden keine Rezepte für diese Zutaten gefunden.<br>
+		<a href="/rezeptzutatensuche">Zurück zur Suche</a>
+	</check>
 	<repeat group="{{ @result }}" value="{{ @recipe }}">
 		<repeat group="{{ @recipe }}" value="{{ @item }}">
 			<a href="/recipe/{{@item.id}}">{{ @item.name }}</a>
