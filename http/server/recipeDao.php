@@ -59,9 +59,9 @@
 			return $this->execQuery();
 		}
 
-		public function searchRecipesByIngredient($ingredientid)
+		public function searchRecipesByIngredient($ingredientids)
 		{
-			$this->setCallQuery("searchRecipesByIngredient", $ingredientid);
+			$this->setCallQuery("searchRecipesByIngredient", $ingredientids);
 			return $this->execQuery();
 		}
 

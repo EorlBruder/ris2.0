@@ -1,11 +1,16 @@
 <div>
 	<check if="{{ @result == '' }}">
-		Es wurden keine Rezepte für diese Zutaten gefunden.<br>
-		<a href="/rezeptzutatensuche">Zurück zur Suche</a>
+		<true>
+			Es wurden keine Rezepte für diese Zutaten gefunden.<br>
+			<a href="/rezeptzutatensuche">Zurück zur Suche</a>
+		</true>
+		<false>
+			Es wurden folgende Rezepte gefunden:
+			<ul>
+			<repeat group="{{ @result }}" value="{{ @recipe }}">
+				<li><a href="/recipe/{{@recipe.id}}">{{ @recipe.name }}</a></li>
+			</repeat>
+			</ul>
+		</false>
 	</check>
-	<repeat group="{{ @result }}" value="{{ @recipe }}">
-		<repeat group="{{ @recipe }}" value="{{ @item }}">
-			<a href="/recipe/{{@item.id}}">{{ @item.name }}</a>
-		</repeat>
-	</repeat>
 </div>
